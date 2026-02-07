@@ -51,7 +51,7 @@ const server = http
           .on('end', () => {
             const answer = new URLSearchParams(rawData);
             const body = `${answer.get('name')}さんは${answer.get('favorite')}に投票しました`;
-            console.info(`[${now}] ${body}`);
+            console.info(`[${body}`);
             res.write(
               `<!DOCTYPE html><html lang="ja"><body><h1>${body}</h1></body></html>`
             );
